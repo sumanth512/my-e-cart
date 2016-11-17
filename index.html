@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-cookies.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+
+
+    <link rel="stylesheet" href="assects/css/cart.css">
+    <link rel="stylesheet" href="assects/fonts/glyphicons-halflings-regular.eot">
+    <link rel="stylesheet" href="assects/fonts/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" href="assects/fonts/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" href="assects/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" href="assects/fonts/glyphicons-halflings-regular.woff2">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+
+    <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" href="http://map2city.com/wp-content/uploads/2015/12/CafeCoffeeDay.jpg">
+    <title>e-cart</title>
+</head>
+<body ng-app="myApp" style="background-color:#9E9E9E ">
+<nav class="navbar navbar-findcond navbar-fixed-top">
+    <div class="container" ng-controller="categoriesCtrl">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="categories" >E-cart</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <p class="dropdown-toggle cat" data-toggle="dropdown" role="button" aria-expanded="false">
+                        categories</p>
+                    <ul class="dropdown-menu" role="menu" ng-controller="productViewCtrl">
+                        <li ng-repeat="cat in categories"><a ui-sref="products({name:cat.name})">{{cat.name}}</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown" ng-controller="cartCtrl">
+                    <p class="dropdown-toggle cat" data-toggle="dropdown" role="button" aria-expanded="false" ><i
+                            class="fa fa-fw fa-bell-o"></i> cart <span class="badge">{{myCount}}</span></p>
+                    <ul class="dropdown-menu" role="menu">
+
+                        <li ng-repeat="cart in myCart" ><a ui-sref="product-view({name:cart.title})">{{cart.title}}</a></li>
+                        <hr>
+                     <a class="checkout" ui-sref="cart">check out</a>
+                    </ul>
+
+                </li>
+
+                <li class="dropdown">
+                    <p class="dropdown-toggle cat" data-toggle="dropdown" role="button" aria-expanded="false">My Account<span
+                            class="caret"></span></p>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ui-sref="/">SUMANTH</a></li>
+                        <li><a ui-sref="cart">cart</a></li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="/">profile</a></li>
+                        <li><a ui-sref="/">logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right search-form"  role="search" >
+                <input type="text" class="form-control" placeholder="Search"/>
+            </form>
+        </div>
+    </div>
+</nav>
+<div ui-view>
+</div>
+<footer class="footer" style="margin-top: 500px">
+    <div class="container">
+    </div>
+</footer>
+<hr>
+<footer >
+            <p>Copyright &copy; E-Cart 2014</p>
+</footer>
+</div>
+
+<script src="controllers/categoriesCtrl.js"></script>
+<script src="controllers/productsCtrl.js"></script>
+<script src="services/categoriesSvc.js"></script>
+<script src="services/productSvc.js"></script>
+<script src="controllers/cart.js"></script>
+<script src="services/cartSvc.js"></script>
+<script src="controllers/productView.js"></script>
+<script src="services/productViewSvc.js"></script>
+<script src="controllers/cart.js"></script>
+<script src="dirictives/addtocart.js"></script>
+<script src="services/cartSvc.js"></script>
+<script src="controllers/carViewtCtrl.js"></script>
+<script src="controllers/login.js"></script>
+<script src="services/loginSvc.js"></script>
+</body>
+</html>

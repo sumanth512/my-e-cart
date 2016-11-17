@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "HOT COFFEE","imageURL":"assects/images/hotcoffe1.jpg","text":"A belly of Italian espresso smoothened with steamed and foamed milk."},
+  {"id": 2, "name": "COLD COFFEE","imageURL":"assects/images/cold coffe.jpg","text":"A belly of Italian espresso smoothened with steamed and foamed milk."},
+  {"id": 3, "name": "CHOCOHOLICAS","imageURL":"assects/images/choco1.jpg","text":"A belly of Italian espresso smoothened with steamed and foamed milk."},
+  {"id": 4, "name": "SIP n SNACK","imageURL":"assects/images/sip1.jpg","text":"A belly of Italian espresso smoothened with steamed and foamed milk."},
+  {"id": 5, "name": "SLUSSHH","imageURL":"assects/images/slusshh1.jpg","text":"A belly of Italian espresso smoothened with steamed and foamed milk."}
+]

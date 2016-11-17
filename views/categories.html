@@ -1,0 +1,206 @@
+<div class="container">
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('assects/images/c11.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('assects/images/c2.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('assects/images/c3.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
+
+         <!--Controls -->
+        <p class="left carousel-control" data-slide="prev">
+            <span class="icon-prev"></span>
+        </p>
+        <p class="right carousel-control"  data-slide="next">
+            <span class="icon-next"></span>
+        </p>
+
+    </header>
+
+    <!--<div class="row">-->
+
+        <!--<div class="col-md-3">-->
+            <!--&lt;!&ndash;<p class="lead">coffe</p>&ndash;&gt;-->
+            <!--<div class="list-group" ng-repeat="cat in categories">-->
+                <!--<a href="#/products/{{cat.id}}" class="list-group-item">{{cat.name}}</a>-->
+
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="col-md-9">-->
+
+            <!--<div class="row carousel-holder">-->
+
+                <!--<div class="col-md-12">-->
+                    <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+                        <!--<ol class="carousel-indicators">-->
+                            <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+                            <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+                            <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+                        <!--</ol>-->
+                        <!--<div class="carousel-inner">-->
+                            <!--<div class="item active">-->
+                                <!--<img class="slide-image" src="assects/images/c2.jpg"alt="">-->
+                            <!--</div>-->
+                            <!--<div class="item">-->
+                                <!--<img class="slide-image" src="assects/images/c1.jpg" alt="">-->
+                            <!--</div>-->
+                            <!--<div class="item">-->
+                                <!--<img class="slide-image" src="assects/images/c3.jpg" alt="">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">-->
+                            <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+                        <!--</a>-->
+                        <!--<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">-->
+                            <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <div class="container">
+                <h1>our products</h1>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="cat in categories">
+                    <div class="thumbnail sumanth">
+                        <!--<div ng-click="getProduct(cat.name)">-->
+                        <img src="{{cat.image}}"  alt="" class="img">
+                        <div class="caption">
+                            <h4 class="pull-right"></h4>
+                            <h4><a ui-sref="products({name: cat.name})">{{cat.name}}</a></h4>
+                            <p>{{cat.description}}</p>
+                        </div>
+                        <!--</div>-->
+                        <!--<div class="ratings">-->
+                            <!--&lt;!&ndash;<p class="pull-right">15 reviews</p>&ndash;&gt;-->
+                        <!--</div>-->
+                    </div>
+                </div>
+
+                <!--<div class="col-sm-4 col-lg-4 col-md-4">-->
+                    <!--<div class="thumbnail">-->
+                        <!--<img src="http://placehold.it/320x150" alt="">-->
+                        <!--<div class="caption">-->
+                            <!--<h4 class="pull-right">$64.99</h4>-->
+                            <!--<h4><a href="#">{{cat.name}}</a>-->
+                            <!--</h4>-->
+                            <!--<p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                        <!--</div>-->
+                        <!--<div class="ratings">-->
+                            <!--<p class="pull-right">12 reviews</p>-->
+                            <!--<p>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty"></span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-sm-4 col-lg-4 col-md-4">-->
+                    <!--<div class="thumbnail">-->
+                        <!--<img src="http://placehold.it/320x150" alt="">-->
+                        <!--<div class="caption">-->
+                            <!--<h4 class="pull-right">$74.99</h4>-->
+                            <!--<h4><a href="#">{{cat.name}}</a>-->
+                            <!--</h4>-->
+                            <!--<p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                        <!--</div>-->
+                        <!--<div class="ratings">-->
+                            <!--<p class="pull-right">31 reviews</p>-->
+                            <!--<p>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty"></span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-sm-4 col-lg-4 col-md-4">-->
+                    <!--<div class="thumbnail">-->
+                        <!--<img src="http://placehold.it/320x150" alt="">-->
+                        <!--<div class="caption">-->
+                            <!--<h4 class="pull-right">$84.99</h4>-->
+                            <!--<h4><a href="#">{{cat.name}}</a>-->
+                            <!--</h4>-->
+                            <!--<p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                        <!--</div>-->
+                        <!--<div class="ratings">-->
+                            <!--<p class="pull-right">6 reviews</p>-->
+                            <!--<p>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty"></span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-sm-4 col-lg-4 col-md-4">-->
+                    <!--<div class="thumbnail">-->
+                        <!--<img src="http://placehold.it/320x150" alt="">-->
+                        <!--<div class="caption">-->
+                            <!--<h4 class="pull-right">$94.99</h4>-->
+                            <!--<h4><a href="#">{{cat.name}}</a>-->
+                            <!--</h4>-->
+                            <!--<p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                        <!--</div>-->
+                        <!--<div class="ratings">-->
+                            <!--<p class="pull-right">18 reviews</p>-->
+                            <!--<p>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty"></span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-sm-4 col-lg-4 col-md-4">-->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
