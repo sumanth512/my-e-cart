@@ -3,8 +3,7 @@ app.controller("categoriesCtrl",function($scope,categoriesSvc,cartSvc) {
     function getlist(){
         categoriesSvc.getCatg()
             .then(function (response) {
-                $scope.categories=response
-
+                $scope.catt=response
             })
             .catch(function (response) {
                 $scope.response="error response"
@@ -16,8 +15,7 @@ app.controller("categoriesCtrl",function($scope,categoriesSvc,cartSvc) {
 
     $scope.myCart=cartSvc;
     $scope.$watch("myCart.getCount()",function(x,y){
-        $scope.myCount=x;
-        // console.log(y);
+        $scope.myCount=x
     })
 
 })
